@@ -274,7 +274,9 @@ function initIndustrias(){
 }
 
 function initCasos(){
-  document.getElementById('caseGrid').innerHTML=cases.map(c=>`
+  const caseGrid = document.getElementById('caseGrid');
+
+  caseGrid.innerHTML = cases.map(c=>`
     <div class="case-card reveal">
       <div class="case-top"><span class="case-ind">${c.ind}</span><span class="case-loc">${c.loc}</span></div>
       <h3>${c.name}</h3>
@@ -284,6 +286,14 @@ function initCasos(){
       </div>
       <div class="case-results">${c.res.map(r=>`<div class="case-res"><span class="n">${r[0]}</span><span class="l">${r[1]}</span></div>`).join('')}</div>
     </div>`).join('');
+
+  requestAnimationFrame(() => {
+    caseGrid.querySelectorAll('.case-card.reveal').forEach((el, i) => {
+      setTimeout(() => {
+        el.classList.add('in');
+      }, i * 90);
+    });
+  });
 }
 
 function initProceso(){
