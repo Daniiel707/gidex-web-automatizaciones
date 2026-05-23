@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Servicios — GIDEX Automatización</title>
+<meta name="description" content="Catálogo completo de automatizaciones: asistente de WhatsApp 24/7, reportería de ventas, control de inventario, reservas y más." />
+<link rel="canonical" href="https://app.gidex.company/servicios" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Servicios — GIDEX Automatización" />
+<meta property="og:description" content="Catálogo completo de automatizaciones: asistente de WhatsApp 24/7, reportería de ventas, control de inventario, reservas y más." />
+<meta property="og:url" content="https://app.gidex.company/servicios" />
+<meta property="og:image" content="https://app.gidex.company/assets/ogimage.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Servicios — GIDEX Automatización" />
+<meta name="twitter:description" content="Catálogo completo de automatizaciones: asistente de WhatsApp 24/7, reportería de ventas, control de inventario, reservas y más." />
+<meta name="twitter:image" content="https://app.gidex.company/assets/ogtwitter.jpg" />
+<meta name="theme-color" content="#0A1628" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon16.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon192.png" />
+<link rel="apple-touch-icon" href="/assets/appletouchicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css" />
+<script defer src="/assets/app.js"></script>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <a class="brand" href="/">
+    <svg viewBox="0 0 200 200"><defs><mask id="nv"><rect width="200" height="200" fill="white"/><rect x="84" y="84" width="32" height="32" transform="rotate(45 100 100)" fill="black"/></mask></defs><g mask="url(#nv)"><path d="M 14 36 L 36 14 L 186 164 L 164 186 Z" fill="#0A1628"/><path d="M 164 14 L 186 36 L 36 186 L 14 164 Z" fill="#0A1628"/></g></svg>
+    <div><div class="name">GIDEX</div><div class="sub">Automation</div></div>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a data-v="servicios" href="/servicios">Servicios</a>
+    <a data-v="industrias" href="/industrias">Industrias</a>
+    <a data-v="casos" href="/casos">Casos</a>
+    <a data-v="proceso" href="/proceso">Proceso</a>
+    <a data-v="contacto" class="nav-cta" href="/contacto">Solicita diagnóstico</a>
+  </div>
+  <button class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="view active">
+  <section class="services" style="padding-top:150px;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="section-num num">/ CATÁLOGO — 25+ SOLUCIONES</div>
+        <h2>Cada proceso repetitivo, <span class="accent">convertido en sistema.</span></h2>
+        <p>Toca cualquier solución para ver exactamente qué hace. Filtra por categoría según lo que tu negocio necesita.</p>
+      </div>
+      <div class="cat-filters reveal" id="catFilters"></div>
+      <div class="svc-grid" id="svcFull"></div>
+    </div>
+  </section>
+  <section class="cta" style="min-height:auto;padding:120px 48px;">
+    <div class="mesh"><div class="blob b2"></div><div class="blob b3"></div></div>
+    <div class="cta-inner reveal">
+      <h2 style="font-size:clamp(34px,5vw,64px);">¿No sabes cuál<br/>necesita tu negocio?</h2>
+      <p>Eso lo resolvemos en el diagnóstico. Te decimos exactamente qué automatizar primero.</p>
+      <a class="btn btn-primary" href="/contacto">Solicita tu diagnóstico <span class="arrow">→</span></a>
+    </div>
+  </section>
+</div>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <svg viewBox="0 0 200 200"><defs><mask id="ft"><rect width="200" height="200" fill="white"/><rect x="84" y="84" width="32" height="32" transform="rotate(45 100 100)" fill="black"/></mask></defs><g mask="url(#ft)"><path d="M 14 36 L 36 14 L 186 164 L 164 186 Z" fill="#0A1628"/><path d="M 164 14 L 186 36 L 36 186 L 14 164 Z" fill="#0A1628"/></g></svg>
+      <span class="n">GIDEX</span>
+    </div>
+    <div class="foot-meta"><span>© 2026 · GIDEX REDCORP</span><span>Cuenca · Ecuador</span><span>Automation System v.1.0</span></div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="wa-fab" id="waFab" href="https://wa.me/593978961466" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 00-.7.3c-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.9 4.5 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg>
+</a>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GIDEX — Automatización Inteligente para tu Negocio</title>
+<meta name="description" content="Asistentes con IA, reportería automática y procesos que operan solos, a la medida de tu empresa en Cuenca, Ecuador." />
+<link rel="canonical" href="https://app.gidex.company" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="GIDEX — Automatización Inteligente para tu Negocio" />
+<meta property="og:description" content="Asistentes con IA, reportería automática y procesos que operan solos, a la medida de tu empresa en Cuenca, Ecuador." />
+<meta property="og:url" content="https://app.gidex.company" />
+<meta property="og:image" content="https://app.gidex.company/assets/ogimage.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="GIDEX — Automatización Inteligente para tu Negocio" />
+<meta name="twitter:description" content="Asistentes con IA, reportería automática y procesos que operan solos, a la medida de tu empresa en Cuenca, Ecuador." />
+<meta name="twitter:image" content="https://app.gidex.company/assets/ogtwitter.jpg" />
+<meta name="theme-color" content="#0A1628" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon16.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon192.png" />
+<link rel="apple-touch-icon" href="/assets/appletouchicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css" />
+<script defer src="/assets/app.js"></script>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <a class="brand" href="/">
+    <svg viewBox="0 0 200 200"><defs><mask id="nv"><rect width="200" height="200" fill="white"/><rect x="84" y="84" width="32" height="32" transform="rotate(45 100 100)" fill="black"/></mask></defs><g mask="url(#nv)"><path d="M 14 36 L 36 14 L 186 164 L 164 186 Z" fill="#0A1628"/><path d="M 164 14 L 186 36 L 36 186 L 14 164 Z" fill="#0A1628"/></g></svg>
+    <div><div class="name">GIDEX</div><div class="sub">Automation</div></div>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a data-v="servicios" href="/servicios">Servicios</a>
+    <a data-v="industrias" href="/industrias">Industrias</a>
+    <a data-v="casos" href="/casos">Casos</a>
+    <a data-v="proceso" href="/proceso">Proceso</a>
+    <a data-v="contacto" class="nav-cta" href="/contacto">Solicita diagnóstico</a>
+  </div>
+  <button class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="view active">
+  <section class="hero">
+    <div class="mesh"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div></div>
+    <div class="hero-grid-lines"></div>
+    <canvas id="net"></canvas>
+    <div class="hero-coord tr">LAT —2.90 · LON —79.00<br/>CUENCA · ECUADOR<br/>SYS · OPERATIONAL</div>
+    <div class="hero-coord bl">/ INDEX 00 — AUTOMATION SYSTEM</div>
+    <div class="hero-inner">
+      <h1><span class="hl1">Tu <span class="rotator" id="hRotator"><span class="rw" id="rwWord">restaurante</span></span>,</span><br/><span class="grad">en piloto automático.</span></h1>
+      <p class="hero-sub">Asistentes con <strong>inteligencia artificial</strong>, reportería automática y procesos que operan solos — diseñados a la medida de tu empresa. <strong>Tú creces; los sistemas trabajan.</strong></p>
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="/contacto">Solicita tu diagnóstico <span class="arrow">→</span></a>
+        <a class="btn btn-ghost" href="/servicios">Ver soluciones</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="num"><span class="accent">+500</span></span><span class="lbl">Horas ahorradas / mes</span></div>
+        <div class="trust-div"></div>
+        <div class="trust-item"><span class="num">24/7</span><span class="lbl">Atención sin pausas</span></div>
+        <div class="trust-div"></div>
+        <div class="trust-item"><span class="num">25+</span><span class="lbl">Soluciones activas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry bar -->
+  <section class="industries-bar">
+    <div class="ind-inner">
+      <div class="ind-head"><div class="t">Automatización por industria</div><div class="s">Selecciona tu sector →</div></div>
+      <div class="ind-btns" id="indBtns"></div>
+      <div class="ind-result" id="indResult"></div>
+      <div class="ind-explore"><a id="indExplore" href="/industrias">Ver todo para esta industria →</a></div>
+    </div>
+  </section>
+
+  <!-- Services preview -->
+  <section class="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="section-num num">/ 01 — SOLUCIONES</div>
+        <h2>Todo lo que tu negocio <span class="accent">deja de hacer a mano.</span></h2>
+        <p>Cada solución reemplaza una tarea repetitiva por un sistema que opera solo — preciso, sin descanso y sin errores.</p>
+      </div>
+      <div class="svc-grid" id="svcPreview"></div>
+      <div class="svc-more reveal"><a class="btn btn-ghost" href="/servicios">Ver todas las soluciones →</a></div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="impact">
+    <div class="impact-grid">
+      <div class="impact-item reveal"><div class="big"><span class="ac">+500</span></div><div class="lbl">Horas ahorradas al mes</div></div>
+      <div class="impact-item reveal"><div class="big">24/7</div><div class="lbl">Operación sin descanso</div></div>
+      <div class="impact-item reveal"><div class="big"><span class="ac">−80%</span></div><div class="lbl">Tareas manuales eliminadas</div></div>
+      <div class="impact-item reveal"><div class="big">25+</div><div class="lbl">Soluciones a la medida</div></div>
+    </div>
+  </section>
+
+  <!-- How (teaser) -->
+  <section class="how">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="section-num num">/ 02 — PROCESO</div>
+        <h2>De tarea manual<br/>a sistema autónomo.</h2>
+        <p>Sin tecnicismos. Diagnosticamos tu operación, diseñamos la solución y la dejamos funcionando.</p>
+      </div>
+      <div class="steps reveal">
+        <div class="step"><div class="sn">01</div><div class="st">Diagnóstico</div><div class="sd">Analizamos tu operación e identificamos qué se puede automatizar. Sin costo, sin compromiso.</div><div class="conn"></div></div>
+        <div class="step"><div class="sn">02</div><div class="st">Diseño</div><div class="sd">Creamos la solución a la medida de tu negocio — productos, precios, flujos y reglas propias.</div><div class="conn"></div></div>
+        <div class="step"><div class="sn">03</div><div class="st">Implementación</div><div class="sd">Ponemos el sistema en marcha y lo entrenamos con la información real de tu empresa.</div><div class="conn"></div></div>
+        <div class="step"><div class="sn">04</div><div class="st">Soporte</div><div class="sd">Monitoreamos, mejoramos y respondemos. Tu sistema evoluciona con tu negocio.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mini CTA -->
+  <section class="cta" style="min-height:auto;padding:130px 48px;">
+    <div class="mesh"><div class="blob b1"></div><div class="blob b3"></div></div>
+    <div class="cta-inner reveal">
+      <svg class="cta-mark" viewBox="0 0 200 200"><defs><mask id="ct1"><rect width="200" height="200" fill="white"/><rect x="84" y="84" width="32" height="32" transform="rotate(45 100 100)" fill="black"/></mask></defs><g mask="url(#ct1)"><path d="M 14 36 L 36 14 L 186 164 L 164 186 Z" fill="#0A1628"/><path d="M 164 14 L 186 36 L 36 186 L 14 164 Z" fill="#0A1628"/></g></svg>
+      <h2>Hablemos de lo<br/>que podemos automatizar.</h2>
+      <p>Cuéntanos sobre tu negocio. Te mostramos exactamente qué procesos pueden trabajar solos — en una llamada de 30 minutos, gratis.</p>
+      <a class="btn btn-primary" href="/contacto">Agenda tu diagnóstico gratis <span class="arrow">→</span></a>
+    </div>
+  </section>
+</div>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <svg viewBox="0 0 200 200"><defs><mask id="ft"><rect width="200" height="200" fill="white"/><rect x="84" y="84" width="32" height="32" transform="rotate(45 100 100)" fill="black"/></mask></defs><g mask="url(#ft)"><path d="M 14 36 L 36 14 L 186 164 L 164 186 Z" fill="#0A1628"/><path d="M 164 14 L 186 36 L 36 186 L 14 164 Z" fill="#0A1628"/></g></svg>
+      <span class="n">GIDEX</span>
+    </div>
+    <div class="foot-meta"><span>© 2026 · GIDEX REDCORP</span><span>Cuenca · Ecuador</span><span>Automation System v.1.0</span></div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="wa-fab" id="waFab" href="https://wa.me/593978961466" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 00-.7.3c-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.9 4.5 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg>
+</a>
+</body>
+</html>
