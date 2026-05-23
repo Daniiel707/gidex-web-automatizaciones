@@ -153,7 +153,7 @@ let currentIvKey=Object.keys(industries)[0];
 
 /* =================== SERVICE CARD =================== */
 function svcCard(s,expandable){
-  return `<div class="svc-card ${s.feature?'feature':''} reveal in" data-cat="${s.cat}">
+  return `<div class="svc-card ${s.feature?'feature':''} reveal" data-cat="${s.cat}">
     <div class="svc-top"><span class="svc-num">${s.n}</span>${s.tag?`<span class="svc-tag">${s.tag}</span>`:`<svg class="svc-ico" viewBox="0 0 40 40">${icons[s.ico]}</svg>`}</div>
     ${s.tag?`<svg class="svc-ico" viewBox="0 0 40 40" style="margin-bottom:18px">${icons[s.ico]}</svg>`:''}
     <div class="svc-name">${s.name}</div>
@@ -211,7 +211,17 @@ function submitForm(){
 
 /* =================== PAGE INITIALISERS =================== */
 function initHome(){
-  document.getElementById('svcPreview').innerHTML=services.slice(0,6).map(s=>svcCard(s,false)).join('');
+  const svcPreview = document.getElementById('svcPreview');
+
+  svcPreview.innerHTML = services.slice(0,6).map(s=>svcCard(s,false)).join('');
+
+  requestAnimationFrame(() => {
+    svcPreview.querySelectorAll('.svc-card.reveal').forEach((el, i) => {
+      setTimeout(() => {
+        el.classList.add('in');
+      }, i * 90);
+    });
+  });
   const indBtns=document.getElementById('indBtns');
   const indResult=document.getElementById('indResult');
   let currentInd=Object.keys(industries)[0];
