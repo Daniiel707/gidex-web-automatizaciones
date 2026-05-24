@@ -394,6 +394,29 @@
   }
   @media(max-width:768px){
     .nav,.hero,.industries-bar,.services,.impact,.how,.iv,.cv,.pv,.cta,footer{padding-left:22px;padding-right:22px;}
+        .nav{
+    top:0;
+    padding-top:calc(18px + env(safe-area-inset-top));
+    padding-bottom:18px;
+    background:linear-gradient(
+      180deg,
+      rgba(247,246,243,0.96) 0%,
+      rgba(247,246,243,0.88) 70%,
+      rgba(247,246,243,0) 100%
+    );
+    backdrop-filter:blur(18px) saturate(1.2);
+    -webkit-backdrop-filter:blur(18px) saturate(1.2);
+  }
+
+  .nav.scrolled{
+    padding-top:calc(13px + env(safe-area-inset-top));
+    padding-bottom:13px;
+    background:rgba(247,246,243,0.86);
+  }
+
+  .hero{
+    padding-top:calc(150px + env(safe-area-inset-top));
+  }
     .nav-links{display:none;}
     .nav-links.open{display:flex;flex-direction:column;position:absolute;top:64px;right:22px;background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:0 20px 40px -20px rgba(10,22,40,0.3);gap:4px;}
     .burger{display:block;}
